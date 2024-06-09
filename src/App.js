@@ -8,6 +8,7 @@ import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 
 import {
+  HashRouter,
   BrowserRouter,
   Route,
   Routes,
@@ -35,7 +36,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
+      <HashRouter>
         <CssBaseline />
         <Routes>
           <Route path="/" element={<ExploreView />} />
@@ -61,7 +62,7 @@ function App() {
           <Route path="/login" element={<LoginView />} />
           <Route path="/signup" element={<SignupView />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }
